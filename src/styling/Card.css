@@ -1,0 +1,8 @@
+#div-card {
+    border-radius: 15px;
+    padding: 20px;
+    width: 400px;
+    display: flex;
+    align-self: center;
+    box-shadow: 3px 3px gray;
+}

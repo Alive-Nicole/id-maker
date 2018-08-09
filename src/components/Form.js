@@ -8,7 +8,7 @@ class Form extends React.Component {
             fname: '',
             lname: '',
             bday: '',
-            phnNumber: ''
+            number: ''
         }
     }
 
@@ -34,9 +34,10 @@ class Form extends React.Component {
                 <label for="phoneNumber">Phone Number: </label>
                 <br/>
                 <input id="phoneNumber" placeholder="Phone Number"
-                    onChange={event => this.setState({phnNumber: event.target.vaue})}/>
+                    onChange={event => this.setState({number: event.target.value})}/>
                 <br/>
-                <Card flame={this.state.fname} lname={this.state.lname} bday={this.state.bday} phnNumber={this.state.phnNumber}/>
+                <hr />
+                <Card fname={this.state.fname} lname={this.state.lname} bday={this.state.bday} number={this.state.number}/>
             </div>
             
         );

@@ -12,7 +12,6 @@ class App extends Component {
         </header>
         <div className="App-form">
           <Form />
-          <Card />
         </div>
         
       </div>
