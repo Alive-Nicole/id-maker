@@ -11,30 +11,30 @@ class Form extends React.Component {
         }
     }
 
-    makeId(){
-        // this.setState({fname: });
-    }
 
     render(){
         return(
             <div>
                 <label for="firstName">First Name: </label>
                 <br/>
-                <input id="firstName" placeholder="First Name"/>
+                <input id="firstName" placeholder="First Name"
+                    onChange={event => this.setState({fname: event.target.value})}/>
                 <br />
                 <label for="lastName">Last Name: </label>
                 <br/>
-                <input id="lastName" placeholder="Last Name"/>
+                <input id="lastName" placeholder="Last Name"
+                    onChange={event => this.setState({lname: event.target.value})}/>
                 <br/>
                 <label for="birthday">Birthday: </label>
                 <br/>
-                <input id="birthday" placeholder="Birthday"/>
+                <input id="birthday" placeholder="Birthday"
+                    onChange={event => this.setState({bday: event.target.value})}/>
                 <br />
                 <label for="phoneNumber">Phone Number: </label>
                 <br/>
-                <input id="phoneNumber" placeholder="Phone Number"/>
+                <input id="phoneNumber" placeholder="Phone Number"
+                    onChange={event => this.setState({phnNumber: event.target.vaue})}/>
                 <br/>
-                <button>Create!</button>
             </div>
             
         );
