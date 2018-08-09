@@ -1,4 +1,5 @@
 import React from 'react';
+import Card from './Card';
 
 class Form extends React.Component {
     constructor(){
@@ -35,6 +36,7 @@ class Form extends React.Component {
                 <input id="phoneNumber" placeholder="Phone Number"
                     onChange={event => this.setState({phnNumber: event.target.vaue})}/>
                 <br/>
+                <Card flame={this.state.fname} lname={this.state.lname} bday={this.state.bday} phnNumber={this.state.phnNumber}/>
             </div>
             
         );

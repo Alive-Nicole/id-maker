@@ -1,5 +1,4 @@
 import React from 'react';
-import Form from './Form';
 
 class Card extends React.Component {
     constructor(props){
