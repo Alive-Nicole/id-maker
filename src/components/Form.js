@@ -9,8 +9,18 @@ class Form extends React.Component {
             fname: '',
             lname: '',
             bday: '',
-            number: ''
+            number: '',
+            img: ''
         }
+    }
+
+    chooseImg = (event) => {
+        console.log(event.target.files[0]);
+        this.setState({img: event.target.files[0]});
+    }
+
+    uploadImg = () => {
+        console.log("Uploaded!");
     }
 
 
@@ -18,26 +28,30 @@ class Form extends React.Component {
         return(
             <div>
                 <form id="form-container">
-                    <label for="firstName">First Name: </label>
+                    <label>First Name: </label>
                     <br/>
-                    <input id="firstName" 
+                    <input id="firstName" required
                         onChange={event => this.setState({fname: event.target.value})}/>
                     <br />
-                    <label for="lastName">Last Name: </label>
+                    <label>Last Name: </label>
                     <br/>
-                    <input id="lastName" 
+                    <input id="lastName" required
                         onChange={event => this.setState({lname: event.target.value})}/>
                     <br/>
-                    <label for="birthday">Birthday: </label>
+                    <label>Birthday: </label>
                     <br/>
-                    <input id="birthday"  type="date"
+                    <input id="birthday"  type="date" required
                         onChange={event => this.setState({bday: event.target.value})}/>
                     <br />
-                    <label for="phoneNumber">Phone Number: </label>
+                    <label>Phone Number: </label>
                     <br/>
-                    <input id="phoneNumber"
+                    <input id="phoneNumber" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required
                         onChange={event => this.setState({number: event.target.value})}/>
+                    <span className="validity"></span>
                     <br/>
+                    <br />
+                    <input id="img" type="file" onChange={this.chooseImg.bind(this)}/>
+                    <button onClick={this.uploadImg}>Upload!</button>
                 </form>
                 
                 <hr />
