@@ -1,8 +1,15 @@
 #div-card {
+
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    
+}
+
+#div-card-container {
     border-radius: 15px;
     padding: 20px;
     width: 400px;
-    display: flex;
-    align-self: center;
     box-shadow: 3px 3px gray;
+    background-color: white;
 }
