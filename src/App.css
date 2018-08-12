@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
   margin: 50px;
   border: 1px solid gray;
   box-shadow: 2px 2px #293d3d;
@@ -10,4 +10,5 @@
 .App-title {
   font-size: 2em;
   color: #009999;
+  text-align: center;
 }

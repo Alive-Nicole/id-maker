@@ -59,6 +59,7 @@ class Form extends React.Component {
                     <label>Phone Number: </label>
                     <br/>
                     <input id="phoneNumber" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required
+                        placeholder="xxx-xxx-xxxx"
                         onChange={event => this.setState({number: event.target.value})}/>
                     <span className="validity"></span>
                     <br/>
