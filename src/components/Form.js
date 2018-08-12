@@ -19,16 +19,15 @@ class Form extends React.Component {
         this.setState({img: event.target.files[0]});
     }
 
-    uploadImg = (img) => {
-        console.log("Uploaded!");
-        var preview = document.querySelector('picture');
+    uploadImg = () => {
+        var preview = document.getElementById('picture');
+        console.log(preview); 
         var file = this.state.img;
-        console.log(file);
         var reader  = new FileReader();
       
         reader.addEventListener("load", function () {
             console.log(reader.result);
-        //   preview.src = reader.result;
+          preview.src = reader.result;
           
         }, false);
       

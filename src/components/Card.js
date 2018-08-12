@@ -3,6 +3,7 @@ import '../styling/Card.css';
 
 class Card extends React.Component {
 
+
     
 
     render(){
