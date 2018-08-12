@@ -11,7 +11,7 @@ class Card extends React.Component {
                 <div id="div-card-container">
                     <div>
 
-                        <img src="" alt="Your face"/>
+                        <img src="" alt="Your face" id="picture"/>
                         
                         <p >{this.props.fname} {this.props.lname}</p>
                     </div>

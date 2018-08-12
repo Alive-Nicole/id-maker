@@ -19,8 +19,22 @@ class Form extends React.Component {
         this.setState({img: event.target.files[0]});
     }
 
-    uploadImg = () => {
+    uploadImg = (img) => {
         console.log("Uploaded!");
+        var preview = document.querySelector('picture');
+        var file = this.state.img;
+        console.log(file);
+        var reader  = new FileReader();
+      
+        reader.addEventListener("load", function () {
+            console.log(reader.result);
+        //   preview.src = reader.result;
+          
+        }, false);
+      
+        if (file) {
+          reader.readAsDataURL(file);
+        }
     }
 
 
@@ -50,7 +64,7 @@ class Form extends React.Component {
                     <span className="validity"></span>
                     <br/>
                     <br />
-                    <input id="img" type="file" onChange={this.chooseImg.bind(this)}/>
+                    <input id="files" type="file" onChange={this.chooseImg.bind(this)}/>
                     <button onClick={this.uploadImg}>Upload!</button>
                 </form>
                 
