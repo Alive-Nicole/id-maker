@@ -4,28 +4,30 @@
     align-items: center;
     flex-direction: row;
     justify-content: space-around;
-    background-color: white;
+    background-color: gray;
 }
 
 #_ff6666,
 #_ff9933,
-#_ffcc66,
+#_ffff3,
 #_99ff66,
 #_66ffcc,
 #_9999ff,
-#_ff99ff {
+#_ff99ff,
+#white {
     width: 18px;
     height: 18px;
 }
 
 #_ff6666:hover ,
 #_ff9933:hover ,
-#_ffcc66:hover ,
+#_ffff3:hover ,
 #_99ff66:hover ,
 #_66ffcc:hover ,
 #_9999ff:hover ,
-#_ff99ff:hover {
-    border: 2px solid white;
+#_ff99ff:hover,
+#white:hover {
+    border: 2px solid gray;
 }
 
 
@@ -41,9 +43,9 @@
     border: 2px solid #ff9933;
 }
 
-#_ffcc66 {
-    background-color: #ffcc66;
-    border: 2px solid #ffcc66;
+#_ffff3 {
+    background-color: #ffff33;
+    border: 2px solid #ffff33;
 }
 
 #_99ff66 {
@@ -64,4 +66,9 @@
 #_ff99ff {
     background-color: #ff99ff;
     border: 2px solid #ff99ff;
+}
+
+#white {
+    background-color: white;
+    border: 2px solid white;
 }

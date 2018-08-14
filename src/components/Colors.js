@@ -1,106 +1,147 @@
 import React from 'react';
 import '../styling/Colors.css';
-// import ReactHoverObserver from 'react-hover-observer';
-//testing and learning how to use ReactHoverObserver
 
 class Colors extends React.Component {
-    //trying to figure out a more DRY method for this color change
-
-    //hover events for the red-ish color
-    renderRedColor(e){
-       
-        document.getElementById("div-card-container").style.backgroundColor = "#ff6666"
+    constructor(props){
+        super(props);
+        this.state = {
+            idColor: 'white'
+        }
     }
 
-    unrenderRedColor(e){
-        
-        document.getElementById("div-card-container").style.backgroundColor = "white"
-    }
-
-    //hover events for the orange-ish color
-    renderOrangeColor(e){
-        
-        document.getElementById("div-card-container").style.backgroundColor = "#ff9933"
-    }
-
-    unrenderOrangeColor(e){
-        
-        document.getElementById("div-card-container").style.backgroundColor = "white"
-    }
-
-    //hover events for the yellow-ish color
-    renderYellowColor(e){
-       
-        document.getElementById("div-card-container").style.backgroundColor = "#ffcc66"
-    }
-
-    unrenderYellowColor(e){
-        
-        document.getElementById("div-card-container").style.backgroundColor = "white"
-    }
-
-    //hover events for the green-ish color
-    renderGreenColor(e){
-     
-        document.getElementById("div-card-container").style.backgroundColor = "#99ff66"
-    }
-
-    unrenderGreenColor(e){
-        
-        document.getElementById("div-card-container").style.backgroundColor = "white"
-    }
-
-    //hover events for the blue-ish color
-    renderBlueColor(e){
-       
-        document.getElementById("div-card-container").style.backgroundColor = "#66ffcc"
-    }
-
-    unrenderBlueColor(e){
-      
-        document.getElementById("div-card-container").style.backgroundColor = "white"
-    }
-
-    //hover events for the indigo-ish color
-    renderIndigoColor(e){
-        
-        document.getElementById("div-card-container").style.backgroundColor = "#9999ff"
-    }
-
-    unrenderIndigoColor(e){
-        
-        document.getElementById("div-card-container").style.backgroundColor = "white"
-    }
-
-    //hover events for the violet-ish color
-    renderVioletColor(e){
     
-        document.getElementById("div-card-container").style.backgroundColor = "#ff99ff"
+
+    //events for the red-ish color
+    setRedColor = () => {
+       
+        this.setState({idColor: '#ff6666'});
     }
 
-    unrenderVioletColor(e){
+    onRedColor = () => {
+        document.getElementById('div-card-container').style.backgroundColor = '#ff6666';
+    }
+
+    
+
+    //events for the orange-ish color
+    setOrangeColor = () => {
         
-        document.getElementById("div-card-container").style.backgroundColor = "white"
+        this.setState({idColor: '#ff9933'});
+    }
+
+    onOrangeColor = () => {
+        document.getElementById('div-card-container').style.backgroundColor = '#ff9933';
+    }
+
+    //events for the yellow-ish color
+    setYellowColor = () => {
+       
+        this.setState({idColor: '#ffff33'});
+    }
+
+    onYellowColor = () => {
+        document.getElementById('div-card-container').style.backgroundColor = '#ffff33';
+    }
+
+    //events for the green-ish color
+    setGreenColor = () => {
+     
+     this.setState({idColor: '#99ff66'});
+    }
+
+    onGreenColor = () => {
+        document.getElementById('div-card-container').style.backgroundColor = '#99ff66';
+    }
+
+    //events for the blue-ish color
+    setBlueColor = () => {
+       
+        this.setState({idColor: '#66ffcc'});
+    }
+
+    onBlueColor = () => {
+        document.getElementById('div-card-container').style.backgroundColor = '#66ffcc';
+    }
+
+    //events for the indigo-ish color
+    setIndigoColor = () => {
+        
+        this.setState({idColor: '#9999ff'});
+    }
+
+    onIndigoColor = () => {
+        document.getElementById('div-card-container').style.backgroundColor = '#9999ff';
+    }
+
+    //evetns for the violet-ish color
+    setVioletColor = () => {
+    
+        this.setState({idColor: '#ff99ff'});
+    }
+
+    onVioletColor = () => {
+        document.getElementById('div-card-container').style.backgroundColor = '#ff99ff';
+    }
+
+    //onclick event for a white color
+    setWhiteColor = () => {
+        
+        this.setState({idColor: 'white'});
+    }
+
+    onWhiteColor = () => {
+        document.getElementById('div-card-container').style.backgroundColor = 'white';
+    }
+
+    //onMouseLeave event
+    offColor = () => {
+        // console.log(this.state.idColor)
+        document.getElementById("div-card-container").style.backgroundColor = this.state.idColor;
     }
 
     render(){
         return (
             <div>
                     <div id="div-colors-container">
-                        <div id="_ff6666"
-                            onMouseEnter={this.renderRedColor} onMouseLeave={this.unrenderRedColor}></div>
-                        <div id="_ff9933"
-                            onMouseEnter={this.renderOrangeColor} onMouseLeave={this.unrenderOrangeColor}></div>
-                        <div id="_ffcc66"
-                            onMouseEnter={this.renderYellowColor} onMouseLeave={this.unrenderYellowColor}></div>
-                        <div id="_99ff66"
-                            onMouseEnter={this.renderGreenColor} onMouseLeave={this.unrenderGreenColor}></div>
-                        <div id="_66ffcc"
-                            onMouseEnter={this.renderBlueColor} onMouseLeave={this.unrenderBlueColor}></div>
-                        <div id="_9999ff"
-                            onMouseEnter={this.renderIndigoColor} onMouseLeave={this.unrenderIndigoColor}></div>
-                        <div id="_ff99ff"
-                            onMouseEnter={this.renderVioletColor} onMouseLeave={this.unrenderVioletColor}></div>
+                        <div id="_ff6666" 
+                            onClick={this.setRedColor} 
+                            onMouseOver={this.onRedColor} 
+                            onMouseLeave={this.offColor}></div>
+
+                        <div id="_ff9933" 
+                            onClick={this.setOrangeColor}
+                            onMouseOver={this.onOrangeColor}
+                            onMouseLeave={this.offColor}></div>
+
+                        <div id="_ffff3" 
+                            onClick={this.setYellowColor}
+                            onMouseOver={this.onYellowColor}
+                            onMouseLeave={this.offColor}></div>
+
+                        <div id="_99ff66" 
+                            onClick={this.setGreenColor}
+                            onMouseOver={this.onGreenColor}
+                            onMouseLeave={this.offColor}></div>
+
+                        <div id="_66ffcc" 
+                            onClick={this.setBlueColor}
+                            onMouseOver={this.onBlueColor}
+                            onMouseLeave={this.offColor}></div>
+
+                        <div id="_9999ff" 
+                            onClick={this.setIndigoColor}
+                            onMouseOver={this.onIndigoColor}
+                            onMouseLeave={this.offColor}></div>
+
+                        <div id="_ff99ff" 
+                            onClick={this.setVioletColor}
+                            onMouseOver={this.onVioletColor}
+                            onMouseLeave={this.offColor}></div>
+
+                        <div id="white" 
+                            onClick={this.setWhiteColor}
+                            onMouseOver={this.onWhiteColor}
+                            onMouseLeave={this.offColor}></div>
                     </div>
                 
                 
