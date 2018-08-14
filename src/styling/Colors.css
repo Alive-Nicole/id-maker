@@ -1,0 +1,53 @@
+#div-colors-container {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#_ff6666,
+#_ff9933,
+#_ffcc66,
+#_99ff66,
+#_66ffcc,
+#_9999ff,
+#_ff99ff {
+    width: 20px;
+    height: 20px;
+}
+
+
+
+
+#_ff6666 {
+    background-color: #ff6666;
+}
+
+#_ff9933 {
+    background-color: #ff9933;
+}
+
+#_ffcc66 {
+    background-color: #ffcc66;
+}
+
+#_99ff66 {
+    background-color: #99ff66;
+}
+
+#_66ffcc {
+    background-color: #66ffcc;
+}
+
+#_9999ff {
+    background-color: #9999ff;
+}
+
+#_ff99ff {
+    background-color: #ff99ff;
+}
+
+.example_child {
+    border: 2px solid white;
+}

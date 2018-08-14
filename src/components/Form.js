@@ -1,5 +1,7 @@
 import React from 'react';
 import Card from './Card';
+import Colors from './Colors';
+// import ReactHoverObserver from 'react-hover-observer'; 
 import '../styling/Form.css';
 
 class Form extends React.Component {
@@ -69,6 +71,15 @@ class Form extends React.Component {
                 </form>
                 
                 <hr />
+                {/* <ReactHoverObserver {...{
+                    onMouseOver: ({ e, setIsHovering, unsetIsHovering }) => {
+                        
+                    }
+                }}>
+                    <Colors {...this.state}/>
+                </ReactHoverObserver> */}
+                
+                <Colors />
                 <Card fname={this.state.fname} lname={this.state.lname} bday={this.state.bday} number={this.state.number}/>
             </div>
             

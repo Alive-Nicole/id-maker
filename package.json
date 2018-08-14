@@ -5,6 +5,7 @@
   "dependencies": {
     "react": "^16.4.2",
     "react-dom": "^16.4.2",
+    "react-hover-observer": "^2.1.0",
     "react-redux": "^5.0.7",
     "react-scripts": "1.1.4",
     "redux": "^4.0.0"
