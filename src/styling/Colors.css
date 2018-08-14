@@ -4,6 +4,7 @@
     align-items: center;
     flex-direction: row;
     justify-content: space-around;
+    background-color: white;
 }
 
 #_ff6666,
@@ -13,41 +14,54 @@
 #_66ffcc,
 #_9999ff,
 #_ff99ff {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
 }
 
-
+#_ff6666:hover ,
+#_ff9933:hover ,
+#_ffcc66:hover ,
+#_99ff66:hover ,
+#_66ffcc:hover ,
+#_9999ff:hover ,
+#_ff99ff:hover {
+    border: 2px solid white;
+}
 
 
 #_ff6666 {
     background-color: #ff6666;
+    border: 2px solid #ff6666;
 }
+
+
 
 #_ff9933 {
     background-color: #ff9933;
+    border: 2px solid #ff9933;
 }
 
 #_ffcc66 {
     background-color: #ffcc66;
+    border: 2px solid #ffcc66;
 }
 
 #_99ff66 {
     background-color: #99ff66;
+    border: 2px solid #99ff66;
 }
 
 #_66ffcc {
     background-color: #66ffcc;
+    border: 2px solid #66ffcc;
 }
 
 #_9999ff {
     background-color: #9999ff;
+    border: 2px solid #9999ff;
 }
 
 #_ff99ff {
     background-color: #ff99ff;
-}
-
-.example_child {
-    border: 2px solid white;
+    border: 2px solid #ff99ff;
 }

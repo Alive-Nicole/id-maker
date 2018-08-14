@@ -4,18 +4,83 @@ import '../styling/Colors.css';
 //testing and learning how to use ReactHoverObserver
 
 class Colors extends React.Component {
-    // state = {
-        
-    // }
+    //trying to figure out a more DRY method for this color change
 
-    //methods are being called without being hovered over
-    //https://www.npmjs.com/package/react-hover-observer
-    renderColor(){
-        console.log("Color is being rendered");
+    //hover events for the red-ish color
+    renderRedColor(e){
+       
+        document.getElementById("div-card-container").style.backgroundColor = "#ff6666"
     }
 
-    unrenderColor(){
-        console.log("Color is no longer rendered");
+    unrenderRedColor(e){
+        
+        document.getElementById("div-card-container").style.backgroundColor = "white"
+    }
+
+    //hover events for the orange-ish color
+    renderOrangeColor(e){
+        
+        document.getElementById("div-card-container").style.backgroundColor = "#ff9933"
+    }
+
+    unrenderOrangeColor(e){
+        
+        document.getElementById("div-card-container").style.backgroundColor = "white"
+    }
+
+    //hover events for the yellow-ish color
+    renderYellowColor(e){
+       
+        document.getElementById("div-card-container").style.backgroundColor = "#ffcc66"
+    }
+
+    unrenderYellowColor(e){
+        
+        document.getElementById("div-card-container").style.backgroundColor = "white"
+    }
+
+    //hover events for the green-ish color
+    renderGreenColor(e){
+     
+        document.getElementById("div-card-container").style.backgroundColor = "#99ff66"
+    }
+
+    unrenderGreenColor(e){
+        
+        document.getElementById("div-card-container").style.backgroundColor = "white"
+    }
+
+    //hover events for the blue-ish color
+    renderBlueColor(e){
+       
+        document.getElementById("div-card-container").style.backgroundColor = "#66ffcc"
+    }
+
+    unrenderBlueColor(e){
+      
+        document.getElementById("div-card-container").style.backgroundColor = "white"
+    }
+
+    //hover events for the indigo-ish color
+    renderIndigoColor(e){
+        
+        document.getElementById("div-card-container").style.backgroundColor = "#9999ff"
+    }
+
+    unrenderIndigoColor(e){
+        
+        document.getElementById("div-card-container").style.backgroundColor = "white"
+    }
+
+    //hover events for the violet-ish color
+    renderVioletColor(e){
+    
+        document.getElementById("div-card-container").style.backgroundColor = "#ff99ff"
+    }
+
+    unrenderVioletColor(e){
+        
+        document.getElementById("div-card-container").style.backgroundColor = "white"
     }
 
     render(){
@@ -23,13 +88,19 @@ class Colors extends React.Component {
             <div>
                     <div id="div-colors-container">
                         <div id="_ff6666"
-                            onMouseEnter={this.renderColor()} onMouseLeave={this.renderColor()}></div>
-                        <div id="_ff9933" width="15" height="15"></div>
-                        <div id="_ffcc66" width="15" height="15"></div>
-                        <div id="_99ff66" width="15" height="15"></div>
-                        <div id="_66ffcc" width="15" height="15"></div>
-                        <div id="_9999ff" width="15" height="15"></div>
-                        <div id="_ff99ff" width="15" height="15"></div>
+                            onMouseEnter={this.renderRedColor} onMouseLeave={this.unrenderRedColor}></div>
+                        <div id="_ff9933"
+                            onMouseEnter={this.renderOrangeColor} onMouseLeave={this.unrenderOrangeColor}></div>
+                        <div id="_ffcc66"
+                            onMouseEnter={this.renderYellowColor} onMouseLeave={this.unrenderYellowColor}></div>
+                        <div id="_99ff66"
+                            onMouseEnter={this.renderGreenColor} onMouseLeave={this.unrenderGreenColor}></div>
+                        <div id="_66ffcc"
+                            onMouseEnter={this.renderBlueColor} onMouseLeave={this.unrenderBlueColor}></div>
+                        <div id="_9999ff"
+                            onMouseEnter={this.renderIndigoColor} onMouseLeave={this.unrenderIndigoColor}></div>
+                        <div id="_ff99ff"
+                            onMouseEnter={this.renderVioletColor} onMouseLeave={this.unrenderVioletColor}></div>
                     </div>
                 
                 
@@ -39,23 +110,3 @@ class Colors extends React.Component {
 }
 
 export default Colors;
-
-
-// const Colors = ({ isHovering = false }) => {
-//     return(
-//     <div id="div-colors-container">
-//         <div id="_ff6666"
-//             className="example_child"></div>
-//         <div id="_ff9933" ></div>
-//         <div id="_ffcc66" ></div>
-//         <div id="_99ff66" ></div>
-//         <div id="_66ffcc" ></div>
-//         <div id="_9999ff" ></div>
-//         <div id="_ff99ff" ></div>
-//     </div>
-//     );
-    
-                
-// }
-
-// export default Colors;
