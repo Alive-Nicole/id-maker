@@ -39,6 +39,14 @@ class Form extends React.Component {
 
     printID = () => {
         console.log("Printing!");
+        
+        //this only prints out the contents and not the styling as well
+        var printIdCard = document.getElementById('picture');
+        var w = window.open();
+        w.document.write(printIdCard);
+        w.print();
+        w.close();
+        
     }
 
     render(){
